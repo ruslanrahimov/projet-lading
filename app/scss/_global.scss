@@ -9,6 +9,8 @@ html {
 
 *, *:before, *:after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 // ScrollHide
 
@@ -36,10 +38,7 @@ a, a:visited, a:hover {
   cursor: pointer;
 }
 // Text
-h1, h2, h3,h4,h5,h6 {
-  margin: 0;
-  padding: 0;
-}
+
 
 h1,h2{
   color:$drk-blue;
@@ -48,6 +47,7 @@ h1,h2{
 }
 p{
   color: $txt-color;
+ 
 }
 
 .section__title{

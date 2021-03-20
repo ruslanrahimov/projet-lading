@@ -1,6 +1,6 @@
 .about {
-    
     padding-top: 5rem;
+    padding-bottom: 10rem;
     &__wrapper {
         display: flex;
         flex-direction: column;
@@ -29,6 +29,10 @@
         line-height: 1.8;
         letter-spacing: 1.3px;
         position: relative;
+        h3{
+            margin-top: 1rem;
+        }
+
     }
 
     &__image {
@@ -68,21 +72,21 @@
     padding-bottom: 5rem;
 }
 
-
-.slider__btns{
+.slider__btns {
     margin-top: -4rem;
 
-    .slider-button-next,.slider-button-prev {
+    .slider-button-next,
+    .slider-button-prev {
         width: 3rem;
         height: 3rem;
         background: $light-gray;
         border: none;
         position: relative;
         cursor: pointer;
-        transition: all .3s ease-in-out;
-        
-        &::before{
-            content: '';
+        transition: all 0.3s ease-in-out;
+
+        &::before {
+            content: "";
             position: absolute;
             width: 100%;
             height: 100%;
@@ -91,23 +95,19 @@
             bottom: 0;
             left: 0;
         }
-    
     }
-    
-     .slider-button-prev {
-         margin-right: 0.2rem;
-        &::before{
-            background: url('../../images/left.svg') no-repeat center center;
+
+    .slider-button-prev {
+        margin-right: 0.2rem;
+        &::before {
+            background: url("../../images/left.svg") no-repeat center center;
             background-size: 25%;
         }
     }
-     .slider-button-next {
-        &::before{
-            background: url('../../images/right.svg') no-repeat center center;
+    .slider-button-next {
+        &::before {
+            background: url("../../images/right.svg") no-repeat center center;
             background-size: 25%;
         }
     }
 }
-
-
-

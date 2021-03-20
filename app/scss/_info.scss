@@ -1,0 +1,64 @@
+.info {
+    background-color: $drk-blue;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 3.625rem 0;
+    }
+
+    &__title {
+        color: $white;
+    }
+
+    &__statistic {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    &__icon {
+        display: flex;
+        flex-direction: column;
+        padding-left: 4.5rem;
+        color: $white;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: -6.5rem;
+        }
+
+        &--1{
+            &::before{
+               background: url('../../images/tecrube.svg') no-repeat center center;
+                
+            }
+        }
+        &--2{
+            &::before{
+               background: url('../../images/proje.svg') no-repeat center center;
+               
+            }
+        }
+        &--3{
+            &::before{
+               background: url('../../images/wifi.svg') no-repeat center center;
+               
+            }
+        }
+        &--4{
+            &::before{
+               background: url('../../images/user.svg') no-repeat center center;
+               
+            }
+        }
+    }
+
+    &__icon--number {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+}
