@@ -1,0 +1,113 @@
+.about {
+    
+    padding-top: 5rem;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding-top: 5rem;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            background: url("../../images/dots.svg") no-repeat center center;
+            width: 100%;
+            height: 100%;
+            top: -9rem;
+            left: -33rem;
+        }
+    }
+
+    &__text {
+        width: 88%;
+        line-height: 1.8;
+        letter-spacing: 1.3px;
+        position: relative;
+    }
+
+    &__image {
+        background: url("../../images/about-1-min.jpg") no-repeat center center;
+        background-size: cover;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            background: $yellow-color;
+            width: 100%;
+            height: 100%;
+            top: -10px;
+            right: 0;
+            left: -14px;
+            bottom: 0;
+            z-index: -1;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            background: $drk-blue;
+            width: 100%;
+            height: 100%;
+            top: 10px;
+            right: 0;
+            left: 14px;
+            bottom: 0;
+            z-index: -1;
+        }
+    }
+}
+
+.swiper-container-2 {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 5rem;
+}
+
+
+.slider__btns{
+    margin-top: -4rem;
+
+    .slider-button-next,.slider-button-prev {
+        width: 3rem;
+        height: 3rem;
+        background: $light-gray;
+        border: none;
+        position: relative;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+        
+        &::before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    
+    }
+    
+     .slider-button-prev {
+         margin-right: 0.2rem;
+        &::before{
+            background: url('../../images/left.svg') no-repeat center center;
+            background-size: 25%;
+        }
+    }
+     .slider-button-next {
+        &::before{
+            background: url('../../images/right.svg') no-repeat center center;
+            background-size: 25%;
+        }
+    }
+}
+
+
+

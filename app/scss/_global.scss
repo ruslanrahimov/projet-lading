@@ -16,6 +16,7 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+  font-weight: 300;
 }
 
 ul {
@@ -47,6 +48,29 @@ h1,h2{
 }
 p{
   color: $txt-color;
+}
+
+.section__title{
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  line-height: 1.6;
+  z-index: 10;
+  
+
+  &::after{
+    content: '';
+    position: absolute;
+    width: 22%;
+    height: 1.125rem;
+    background: $yellow-color;
+    left: 51%;
+    transform: translateX(-50%);
+    bottom: 20%;
+    
+    z-index: -10;
+  }
 }
 
 

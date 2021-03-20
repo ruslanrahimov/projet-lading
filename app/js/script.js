@@ -1,5 +1,10 @@
 let swiperAnimation = new SwiperAnimation();
-let swiper = new Swiper('.swiper-container', {
+
+const sliderFirst = document.querySelector('.swiper-container');
+const sliderSecond = document.querySelector('.swiper-container-2');
+
+
+let swiper = new Swiper(sliderFirst, {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
@@ -23,6 +28,22 @@ let swiper = new Swiper('.swiper-container', {
   },
   
 });
+
+let swiperSecond = new Swiper(sliderSecond, {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  navigation: {
+    nextEl: '.slider-button-next',
+    prevEl: '.slider-button-prev',
+  },
+  autoplay: {
+    delay: 8000,
+  },
+  
+});
+
+
 
 
 
