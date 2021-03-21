@@ -26,7 +26,7 @@ let swiper = new Swiper(sliderFirst, {
       swiperAnimation.init(this).animate();
     }
   },
-  
+
 });
 
 let swiperSecond = new Swiper(sliderSecond, {
@@ -40,10 +40,16 @@ let swiperSecond = new Swiper(sliderSecond, {
   autoplay: {
     delay: 8000,
   },
-  
+
 });
 
+// Accordion //
 
+document.querySelector('.service-accordion').addEventListener('click', (event) => {
+  if (event.target.closest('.service-accordion__item')) {
+    event.target.closest('.service-accordion__item').classList.toggle('service-accordion__item--active')
+  }
+});
 
 
 

@@ -1,0 +1,58 @@
+.service {
+    background: url("../../images/service-bg.png") no-repeat;
+    background-size: contain;
+    padding: 7rem 0;
+    
+    &__iner {
+        padding: 0 5rem;
+    }
+
+    &__title {
+        &::after {
+            width: 31%;
+            left: 51%;
+        }
+    }
+
+    &-accordion {
+        padding-top: 4rem;
+
+        &__item {
+            padding-top: 1rem;
+            $parent: &;
+
+            &--active {
+                #{$parent}-triger-icon {
+                    transform: rotate(360deg);
+                }
+                #{$parent}-content {
+                    display: flex;
+                }
+            }
+
+            &-triger {
+                display: flex;
+                border-bottom: 2px solid #c7dfff;
+                align-items: center;
+                justify-content: space-between;
+                padding-bottom: 0.635rem;
+                cursor: pointer;
+
+                &-icon {
+                    transform: rotate(180deg);
+                }
+                &-text {
+                    font-size: 1.375rem;
+                    font-weight: 400;
+                    flex-grow: 1;
+                }
+            }
+
+            &-content {
+                display: none;
+                padding-top: 1.5rem;
+                
+            }
+        }
+    }
+}
