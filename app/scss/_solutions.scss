@@ -1,0 +1,133 @@
+.solutions {
+    background: $drk-blue;
+    padding: 5rem 0 7.8rem 0;
+
+    &__title {
+        h2 {
+            color: $white;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1;
+        padding-top: 4.5rem;
+    }
+
+    &__card {
+        background: #fff;
+        width: 23%;
+        position: relative;
+        display: block;
+        cursor: pointer;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        &::before {
+            background: $yellow-color;
+            left: -0.5rem;
+            top: -0.5rem;
+        }
+        &::after {
+            background: $dark-violet;
+            right: -0.5rem;
+            bottom: -0.5rem;
+        }
+
+        &-cover {
+            min-height: 12rem;
+        }
+        &-cover--1 {
+            background: url("../../images/card-img-1.jpg") no-repeat center center;
+            background-size: cover;
+        }
+
+        &-text {
+            padding: 1.125rem 3.75rem 1.125rem 1.125rem;
+            &-header {
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 30%;
+                    height: 2px;
+                    background: #000;
+                    bottom: -1rem;
+                    left: 0;
+                }
+
+                h4 {
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                }
+            }
+
+            &-article {
+                font-size: 0.875rem;
+                padding-top: 2rem;
+            }
+        }
+    }
+
+// Slider
+
+
+    .swiper-container-3 {
+        overflow: hidden;
+    }
+
+    .swiper-pagination-3 {
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .swiper-pagination-bullet {
+        width: 50px;
+        height: 5px;
+        margin: 0 .2rem;
+        display: inline-block;
+        border-radius: 0;
+        background: #1C4070;
+        
+    }
+
+    .swiper-pagination-bullet-active {
+        opacity: 1;
+        background: #fff;
+    }
+
+    &-slider-next,
+    &-slider-prev {
+        background: none;
+        border: none;
+        position: absolute;
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &-slider-next {
+        right: -3.5rem;
+        top: 13.875rem;
+    }
+
+    &-slider-prev {
+        top: 13.875rem;
+        left: -3.6rem;
+    }
+}
