@@ -46,9 +46,10 @@ let swiperSecond = new Swiper(sliderSecond, {
 
 let swiperThird = new Swiper(sliderThird, {
   direction: 'horizontal',
+  autoHeight: true,
   loop: true,
   slidesPerView: 4,
-  spaceBetween: 10,
+  spaceBetween: 30,
   navigation: {
     nextEl: '.solutions-slider-next',
     prevEl: '.solutions-slider-prev',
@@ -56,11 +57,14 @@ let swiperThird = new Swiper(sliderThird, {
   pagination: {
     el: '.swiper-pagination-3',
     type: 'bullets',
+    dynamicBullets: true,
+    
   },
   autoplay: {
-    delay: 8000,
+    delay: 3000,
   },
 })
+
 
 
 // Accordion //

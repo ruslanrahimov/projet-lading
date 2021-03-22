@@ -3,8 +3,14 @@
     padding: 5rem 0 7.8rem 0;
 
     &__title {
+        position: relative;
         h2 {
             color: $white;
+        }
+
+        &::after{
+            width: 25%;
+            background: $dark-violet;
         }
     }
 
@@ -22,6 +28,7 @@
         position: relative;
         display: block;
         cursor: pointer;
+        min-height: 366px;
 
         &::before,
         &::after {
@@ -47,9 +54,42 @@
             min-height: 12rem;
         }
         &-cover--1 {
-            background: url("../../images/card-img-1.jpg") no-repeat center center;
+            background: url("../../images/card-1-min.jpg") no-repeat center center;
             background-size: cover;
         }
+        &-cover--2 {
+            background: url("../../images/card-2-min.jpeg") no-repeat center center;
+            background-size: cover;
+        }
+        &-cover--3 {
+            background: url("../../images/card-3-min.jpg") no-repeat center center;
+            background-size: cover;
+        }
+        &-cover--4 {
+            background: url("../../images/card-4-min.jpg") no-repeat center center;
+            background-size: cover;
+        }
+        &-cover--5 {
+            background: url("../../images/card-5-min.jpg") no-repeat center center;
+            background-size: cover;
+        }
+        &-cover--6 {
+            background: url("../../images/card-6-min.jpeg") no-repeat center center;
+            background-size: cover;
+        }
+        &-cover--7 {
+            background: url("../../images/card-7-min.jpg") no-repeat center center;
+            background-size: cover;
+        }
+        &-cover--8 {
+            background: url("../../images/card-8-min.jpg") no-repeat center center;
+            background-size: cover;
+        }
+        &-cover--9 {
+            background: url("../../images/card-9-min.jpg") no-repeat center center;
+            background-size: cover;
+        }
+        
 
         &-text {
             padding: 1.125rem 3.75rem 1.125rem 1.125rem;
@@ -67,7 +107,7 @@
                 }
 
                 h4 {
-                    font-size: 1.2rem;
+                    font-size: 1rem;
                     font-weight: 400;
                 }
             }
@@ -79,32 +119,34 @@
         }
     }
 
-// Slider
-
+    // Slider
 
     .swiper-container-3 {
         overflow: hidden;
+        height: 400px;
+        display: flex;
+        align-items: center;
     }
 
     .swiper-pagination-3 {
         position: absolute;
         bottom: -50px;
-        left: 50%;
+        left: 53%;
         transform: translateX(-50%);
     }
 
     .swiper-pagination-bullet {
         width: 50px;
         height: 5px;
-        margin: 0 .2rem;
+        margin: 0 0.2rem;
         display: inline-block;
         border-radius: 0;
-        background: #1C4070;
+        background: #69a1eb;
         
     }
 
     .swiper-pagination-bullet-active {
-        opacity: 1;
+        
         background: #fff;
     }
 
