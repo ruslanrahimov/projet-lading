@@ -1,0 +1,130 @@
+.contact {
+    background: $drk-blue;
+    padding: 4rem 0 2rem 0;
+
+    &__title {
+        position: relative;
+        h2 {
+            color: $white;
+        }
+
+        &::after {
+            width: 18%;
+            background: $dark-violet;
+        }
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 3rem 0;
+        color: #ffffff;
+    }
+
+    .form {
+        &__item {
+            padding: 0.5rem 0;
+            &-name {
+                width: 90%;
+                padding: 0.8rem 0 0.8rem 0.8rem;
+            }
+            &-mail {
+                width: 90%;
+                padding: 0.8rem 0 0.8rem 0.8rem;
+            }
+        }
+
+        &__message {
+            padding: 0.5rem 0;
+            &-area {
+                width: 90%;
+                min-height: 10rem;
+                padding-top: 0.8rem;
+                padding-left: 0.8rem;
+                font-size: 1rem;
+                resize: vertical;
+            }
+        }
+
+        &__btn {
+            border: none;
+            background: $yellow-color;
+            color: black;
+            padding: 0.7rem 2rem;
+            margin-top: 0.5rem;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: #ffffff;
+            }
+        }
+    }
+
+    &__items-wrapper{
+        padding-left: 2rem;
+    }
+    &__contacts {
+        .contacts {
+            &__header {
+                padding: 0.5rem 0;
+                h5 {
+                    font-size: 1rem;
+                    letter-spacing: 2px;
+                    font-weight: 400;
+                }
+            }
+            &__item {
+                line-height: 2;
+
+                & > span {
+                    display: inline-block;
+                    padding-left: 0.6rem;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+    &__adress {
+        padding-top: 1rem;
+        .adress {
+            &__header {
+                padding-bottom: 0.5rem;
+                h5 {
+                    font-size: 1rem;
+                    letter-spacing: 2px;
+                    font-weight: 400;
+                }
+            }
+            &__item {
+                padding: 0.2rem 0;
+                & > p {
+                    color: #ffffff;
+                    line-height: 1.5;
+                }
+
+                & > a {
+                    display: inline-block;
+                    padding-left: 0.6rem;
+                    letter-spacing: 2px;
+                    color: #ffffff;
+                    padding-top: 0.5rem;
+                }
+            }
+        }
+    }
+
+    &__icons-social {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        height: 42%;
+        a {
+            color: #ffffff;
+            padding: 0 .5rem;
+
+        }
+    }
+}
