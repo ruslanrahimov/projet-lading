@@ -1,3 +1,5 @@
+"use strick"
+
 let swiperAnimation = new SwiperAnimation();
 
 const sliderFirst = document.querySelector('.swiper-container');
@@ -14,7 +16,7 @@ let swiper = new Swiper(sliderFirst, {
   },
   pagination: {
     el: '.swiper-pagination',
-    clickable: true,
+    clickable: false,
     renderBullet: function (index, className) {
       return '<div class="indicator"><span class="' + className + '">' + (`0${index + 1}`) + '</span></div>';
     },
@@ -58,7 +60,7 @@ let swiperThird = new Swiper(sliderThird, {
     el: '.swiper-pagination-3',
     type: 'bullets',
     dynamicBullets: true,
-    
+
   },
   autoplay: {
     delay: 3000,
@@ -74,6 +76,40 @@ document.querySelector('.service-accordion').addEventListener('click', (event) =
     event.target.closest('.service-accordion__item').classList.toggle('service-accordion__item--active')
   }
 });
+
+// Navbar on scroll
+// const nav = document.querySelector('.header__nav')
+
+// window.addEventListener('onscroll', ()=>{
+//   if(doNotTrack.body.scrolltop > 50 || document.documentElement.scrollTop > 50) {
+//     nav.classList.add('header__nav--active')
+//   }else{
+//     nav.classList.remove('header__nav--active')
+//   }
+// })
+
+// Active links
+
+const links = document.querySelectorAll('.nav__link')
+
+links.forEach(link => link.addEventListener('click', function(){
+  links.forEach(activeLink => activeLink.classList.remove('nav__link--active'))
+  this.classList.add('nav__link--active')
+}))
+
+
+// Nav on scroll
+
+window.addEventListener('scroll', function(){
+  const nav = document.querySelector('.header__nav')
+  const windowPosition = window.scrollY > 0;
+
+  nav.classList.toggle('header__nav--active', windowPosition)
+})
+
+
+
+
 
 
 

@@ -7,20 +7,20 @@
         top: 0;
         right: 0;
         border-bottom-left-radius: 20px;
-        z-index: 0;
+        z-index: -1;
     }
 
     //Navigation
 
     &__nav {
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        z-index: 1;
-        padding-top: 2rem;
-    }
-
-    &__nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 20;
+        height: 13vh;
+        transition: all 0.4s ease;
         .nav {
             &__logo {
                 flex: 1;
@@ -58,7 +58,39 @@
                     }
                 }
             }
+
+            &__link--active {
+                position: relative;
+                color: $btn-color;
+
+                &::after {
+                    content: "";
+                    width: 80%;
+                    height: 2px;
+                    background: $btn-color;
+                    margin: 0 auto;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: -8px;
+                    transition: all 0.3s ease-in;
+                }
+            }
         }
+    }
+
+    &__nav-inner {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1;
+        padding-top: 1rem;
+    }
+
+    &__nav--active {
+        background-color: #ffffff;
+        box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.1);
+        
     }
 
     // Navigation //
@@ -69,6 +101,10 @@
         position: relative;
         z-index: 1;
         padding-top: 4.875rem;
+    }
+
+    &__wrapper {
+        padding-top: 3rem;
     }
     .main {
         &__wrapper {
@@ -91,7 +127,7 @@
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: center;
-                .indicator{
+                .indicator {
                     position: relative;
                     &:not(:last-of-type)::after {
                         content: "";
@@ -118,8 +154,6 @@
                     transition: all 0.3s ease-in-out;
                     opacity: 1;
                     position: relative;
-
-                
                 }
 
                 .swiper-pagination-bullet-active {
@@ -127,7 +161,6 @@
                     font-weight: 500;
                     color: $drk-blue;
                     transform: rotate(360deg);
-                    
                 }
             }
         }
@@ -135,7 +168,6 @@
             position: absolute;
             bottom: 1.6rem;
             width: 3%;
-           
         }
 
         &__icons-social {
@@ -175,8 +207,6 @@
             z-index: 1;
             padding-top: 3rem;
         }
-
-        
 
         &__text {
             width: 45%;
@@ -219,5 +249,3 @@
         }
     }
 }
-
-

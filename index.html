@@ -11,7 +11,9 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="./dist/style.css">
-  <title></title>
+  <link rel="icon" href="./images/title-icon.png" type="image/x-icon">
+  <title>Projet | Profesyonel,
+    Doğru ve Hızlı çözümler.</title>
 </head>
 
 <body>
@@ -20,15 +22,14 @@
 
   <header class="header">
     <div class="header__bg"></div>
-    <div class="container">
-      <div class="header__wrapper">
-        <nav class="header__nav">
+    <nav class="header__nav">
+      <div class="header__nav-inner container">
           <a href="#"><img src="./images/logo.svg" alt="projet" class="nav__logo"></a>
           <ul class="nav__list">
-            <li class="list__item"><a href="#" class="nav__link">Anasayfa</a></li>
-            <li class="list__item"><a href="#" class="nav__link">Hakkımızda</a></li>
-            <li class="list__item"><a href="#" class="nav__link">Hizmetlerimiz</a></li>
-            <li class="list__item"><a href="#" class="nav__link">Çözümlerimiz</a></li>
+            <li class="list__item"><a href="#" class="nav__link nav__link--active">Anasayfa</a></li>
+            <li class="list__item"><a href="#about" class="nav__link">Hakkımızda</a></li>
+            <li class="list__item"><a href="#service" class="nav__link">Hizmetlerimiz</a></li>
+            <li class="list__item"><a href="#solutions" class="nav__link">Çözümlerimiz</a></li>
             <li class="list__item"><a href="#" class="nav__link">Digital Dönüşüm</a></li>
             <li class="list__item"><a href="#" class="nav__link">Blog</a></li>
           </ul>
@@ -37,12 +38,14 @@
             <span></span>
             <span></span>
           </div>
-        </nav>
-
+      </div>
+    </nav>
+    <div class="container">
+      <div class="header__wrapper">
         <div class="header__main">
           <div class="main__wrapper">
             <div class="main__arrow-down">
-              <a href="#"><img src="./images/down-arrow-svgrepo-com.svg" alt="aşaya kaydır"></a>
+              <a href="#about"><img src="./images/down-arrow-svgrepo-com.svg" alt="aşaya kaydır"></a>
             </div>
             <div class="main__itmes-control">
               <div class="main__indicators">
@@ -117,6 +120,7 @@
   <!-- ABOUT -->
 
   <section class="about">
+    <a name="about"></a>
     <div class="container">
       <div class="about__wrapper">
         <div class="about__title section__title">
@@ -205,6 +209,7 @@
   <!-- SERVICE -->
 
   <section class="service">
+    <a name="service"></a>
     <div class="container">
       <div class="service__iner">
         <div class="service__title section__title">
@@ -355,6 +360,7 @@
 
 
   <section class="solutions">
+    <a name="solutions"></a>
     <div class="container">
       <div class="solutions__title section__title">
         <h2>Çözümlerimiz</h2>
@@ -509,8 +515,8 @@
       <div class="contact__title section__title">
         <h2>Bize Ulaş</h2>
       </div>
-      <div class="contact__wrapper"> 
-        <form action="#" id="form" class="form__body">
+      <div class="contact__wrapper">
+        <form action="#" id="form" class="form__body" method="POST">
           <div class="form__item">
             <input type="text" name="name" class="form__item-name" placeholder="Ad*:">
           </div>
@@ -518,21 +524,28 @@
             <input type="text" name="mail" class="form__item-mail" placeholder="E-posta*:">
           </div>
           <div class="form__message">
-            <textarea class="form__message-area" name="message" id="message" placeholder="Mesajınızı yazınız"></textarea>
+            <textarea class="form__message-area" name="message" id="message"
+              placeholder="Mesajınızı yazınız"></textarea>
           </div>
           <button type="submit" class="form__btn">GÖNDER</button>
         </form>
 
         <div class="contact__items-wrapper">
           <div class="contact__contacts">
-            <div class="contacts__header"><h5>İletişim</h5></div>
-            <div class="contacts__item"><i class="fas fa-phone-alt"></i><span>  +90 212 454 26 80 | İstanbul</span></div>
-            <div class="contacts__item"><i class="fas fa-phone-alt"></i><span>  +90 212 454 26 80 | Ankara</span></div>
-            <div class="contacts__item"><i class="fas fa-envelope"></i><span>  bilgi@projet.net</span></div>
+            <div class="contacts__header">
+              <h5>İletişim</h5>
+            </div>
+            <div class="contacts__item"><i class="fas fa-phone-alt"></i><span> +90 212 454 26 80 | İstanbul</span></div>
+            <div class="contacts__item"><i class="fas fa-phone-alt"></i><span> +90 212 454 26 80 | Ankara</span></div>
+            <div class="contacts__item"><i class="fas fa-envelope"></i><span> bilgi@projet.net</span></div>
           </div>
           <div class="contact__adress">
-            <div class="adress__header"><h5>Adres</h5></div>
-            <div class="adress__item"><p>Merkez Mah. 29 Ekim Cad. İhlas Plaza No:11<br> A/41  34197, Yenibosna İSTANBUL </p></div>
+            <div class="adress__header">
+              <h5>Adres</h5>
+            </div>
+            <div class="adress__item">
+              <p>Merkez Mah. 29 Ekim Cad. İhlas Plaza No:11<br> A/41 34197, Yenibosna İSTANBUL </p>
+            </div>
             <div class="adress__item"><i class="fas fa-map-marker-alt"></i><a href="#">Lokasyon</a></div>
           </div>
           <div class="contact__icons-social">
@@ -553,7 +566,7 @@
     <span>&copy;2021 Projet All rights reserved</span>
   </footer>
 
-   <!-- FOOTER -->
+  <!-- FOOTER -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@cycjimmy/swiper-animation@4/dist/swiper-animation.umd.min.js"></script>
   <script src="./dist/script.js"></script>
