@@ -77,22 +77,12 @@ document.querySelector('.service-accordion').addEventListener('click', (event) =
   }
 });
 
-// Navbar on scroll
-// const nav = document.querySelector('.header__nav')
-
-// window.addEventListener('onscroll', ()=>{
-//   if(doNotTrack.body.scrolltop > 50 || document.documentElement.scrollTop > 50) {
-//     nav.classList.add('header__nav--active')
-//   }else{
-//     nav.classList.remove('header__nav--active')
-//   }
-// })
 
 // Active links
 
 const links = document.querySelectorAll('.nav__link')
 
-links.forEach(link => link.addEventListener('click', function(){
+links.forEach(link => link.addEventListener('click', function () {
   links.forEach(activeLink => activeLink.classList.remove('nav__link--active'))
   this.classList.add('nav__link--active')
 }))
@@ -100,11 +90,28 @@ links.forEach(link => link.addEventListener('click', function(){
 
 // Nav on scroll
 
-window.addEventListener('scroll', function(){
+window.addEventListener('scroll', function () {
   const nav = document.querySelector('.header__nav')
   const windowPosition = window.scrollY > 0;
 
   nav.classList.toggle('header__nav--active', windowPosition)
+})
+
+// Burger Menu
+
+const header = document.querySelector('.header')
+const mobileMenu = document.querySelector('.header__mobile-menu')
+
+
+header.addEventListener('click', (e) => {
+  e.preventDefault()
+  header.classList.toggle('open')
+
+  if (header.classList.contains('open')) {
+    mobileMenu.classList.add('header__mobile-menu--active')
+  } else {
+    mobileMenu.classList.remove('header__mobile-menu--active')
+  }
 })
 
 
