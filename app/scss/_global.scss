@@ -14,7 +14,11 @@ html {
   margin: 0;
   padding: 0;
 }
+
 // ScrollHide
+.noscroll{
+  overflow: hidden;
+}
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -114,7 +118,7 @@ p{
 }
 
 .hide-for-desktop {
-  @include breakpoint-up(large) {
+  @include breakpoint-up(medium) {
     display: none;
   }
 }
