@@ -78,14 +78,6 @@ document.querySelector('.service-accordion').addEventListener('click', (event) =
 });
 
 
-// Active links
-
-const links = document.querySelectorAll('.nav__link')
-
-links.forEach(link => link.addEventListener('click', function () {
-  links.forEach(activeLink => activeLink.classList.remove('nav__link--active'))
-  this.classList.add('nav__link--active')
-}))
 
 
 // Nav on scroll
@@ -93,27 +85,44 @@ links.forEach(link => link.addEventListener('click', function () {
 window.addEventListener('scroll', function () {
   const nav = document.querySelector('.header__nav')
   const windowPosition = window.scrollY > 0;
-
+  
   nav.classList.toggle('header__nav--active', windowPosition)
 })
 
 // Burger Menu
 
+const body = document.querySelector('.body')
 const header = document.querySelector('.header')
-const mobileMenu = document.querySelector('.header__mobile-menu')
+const menuList = document.querySelector('.nav__list')
+const burger = document.querySelector('.header__menu-burger')
 
 
-header.addEventListener('click', (e) => {
+burger.addEventListener('click', (e) => {
   e.preventDefault()
   header.classList.toggle('open')
-
-  if (header.classList.contains('open')) {
-    mobileMenu.classList.add('header__mobile-menu--active')
-  } else {
-    mobileMenu.classList.remove('header__mobile-menu--active')
+  
+  if(header.classList.contains('open')){
+    menuList.classList.add('nav__mobile-menu--active')
+    body.classList.add('noscroll')
+  }else{
+    menuList.classList.remove('nav__mobile-menu--active')
+    body.classList.remove('noscroll')
   }
 })
 
+// Active links
+
+const links = document.querySelectorAll('.nav__link')
+
+links.forEach(link => link.addEventListener('click', function () {
+  links.forEach(activeLink => activeLink.classList.remove('nav__link--active'))
+  this.classList.add('nav__link--active')
+
+  if(menuList.classList.contains('nav__mobile-menu--active')){
+    header.classList.remove('open')
+    menuList.classList.remove('nav__mobile-menu--active')
+  }
+}))
 
 
 
