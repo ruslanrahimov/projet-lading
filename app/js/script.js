@@ -1,4 +1,3 @@
-"use strick"
 
 let swiperAnimation = new SwiperAnimation();
 
@@ -6,13 +5,12 @@ const sliderFirst = document.querySelector('.swiper-container');
 const sliderSecond = document.querySelector('.swiper-container-2');
 const sliderThird = document.querySelector('.swiper-container-3');
 
-
 let swiper = new Swiper(sliderFirst, {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
   autoplay: {
-    delay: 5000,
+    delay: 10000,
   },
   pagination: {
     el: '.swiper-pagination',
@@ -23,10 +21,10 @@ let swiper = new Swiper(sliderFirst, {
   },
   on: {
     init: function () {
-      swiperAnimation.init(this).animate();
+      swiper.init(this).animate();
     },
     slideChange: function () {
-      swiperAnimation.init(this).animate();
+      swiper.init(this).animate();
     }
   },
 
