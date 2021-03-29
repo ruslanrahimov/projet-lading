@@ -8,6 +8,9 @@
         right: 0;
         border-bottom-left-radius: 20px;
         z-index: -1;
+        @include breakpoint-down(medium) {
+            display: none;
+        }
     }
 
     //Navigation
@@ -19,8 +22,12 @@
         bottom: 0;
         left: 0;
         z-index: 20;
-        height: 13vh;
+        height: 12vh;
         transition: all 0.4s ease;
+
+        @include breakpoint-down(medium) {
+            height: 10vh;
+        }
 
         .nav {
             &__logo {
@@ -113,7 +120,7 @@
         justify-content: space-between;
         position: relative;
         z-index: 1;
-        padding-top: 1rem;
+        padding: 1rem 1.2rem 0 1.2rem;
     }
 
     &__nav--active {
@@ -194,7 +201,7 @@
                         position: absolute;
                         width: 6px;
                         height: 6px;
-                        background: $icons-color;
+                        background: $bullet-color;
                         border-radius: 50%;
                         bottom: 0;
                         left: 50%;
@@ -208,7 +215,7 @@
                     border-radius: 0;
                     font-size: 0.875rem;
                     font-weight: 300;
-                    color: $icons-color;
+                    color: $bullet-color;
                     margin: 15px 0px;
                     transform: rotate(270deg);
                     transition: all 0.3s ease-in-out;
@@ -249,7 +256,6 @@
         }
 
         &__img {
-            background: url("../../images/main-bg-min.jpg") no-repeat right center;
             width: 75%;
             height: 95%;
             position: absolute;
@@ -257,10 +263,24 @@
             right: 0;
             z-index: 0;
             border-radius: 20px;
-            background-size: cover;
             animation-duration: 2s;
-            
-            
+
+            &--1 {
+                background: url("../../images/main-bg-min.jpg") no-repeat right center;
+                background-size: cover;
+            }
+            &--2 {
+                background: url("../../images/bg-2-min.jpg") no-repeat right center;
+                background-size: cover;
+            }
+            &--3 {
+                background: url("../../images/bg-3-min.jpg") no-repeat right center;
+                background-size: cover;
+            }
+            &--4 {
+                background: url("../../images/bg-4-min.jpg") no-repeat right center;
+                background-size: cover;
+            }
         }
 
         &__title {
@@ -269,9 +289,7 @@
             position: relative;
             z-index: 1;
             padding-top: 3rem;
-
         }
-
 
         &__text {
             width: 45%;
@@ -313,5 +331,4 @@
             }
         }
     }
-
 }
