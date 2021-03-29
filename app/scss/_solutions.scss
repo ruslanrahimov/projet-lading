@@ -8,7 +8,7 @@
             color: $white;
         }
 
-        &::after{
+        &::after {
             width: 25%;
             background: $dark-violet;
         }
@@ -89,7 +89,6 @@
             background: url("../../images/card-9-min.jpg") no-repeat center center;
             background-size: cover;
         }
-        
 
         &-text {
             padding: 1.125rem 3.75rem 1.125rem 1.125rem;
@@ -119,6 +118,94 @@
         }
     }
 
+    // Modal
+
+    .modal-overlay {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+        z-index: 99;
+    }
+
+    .modal {
+        background-color: #fff;
+        width: 80%;
+        height: 90%;
+
+        display: none;
+        position: relative;
+        z-index: 100;
+
+        &__cover {
+            min-width: 50%;
+            height: 100%;
+    
+            &--1 {
+                background: url("../../images/card-2-min.jpeg") no-repeat center center;
+                background-size: cover;
+            }
+            &--2 {
+                background: url("../../images/card-3-min.jpg") no-repeat center center;
+                background-size: cover;
+            }
+            &--3 {
+                background: url("../../images/card-4-min.jpg") no-repeat center center;
+                background-size: cover;
+            }
+            &--4 {
+                background: url("../../images/card-5-min.jpg") no-repeat center center;
+                background-size: cover;
+            }
+            &--5 {
+                background: url("../../images/card-6-min.jpeg") no-repeat center center;
+                background-size: cover;
+            }
+            &--6 {
+                background: url("../../images/card-7-min.jpg") no-repeat center center;
+                background-size: cover;
+            }
+        }
+
+        &__text {
+            padding: 2rem 2rem;
+    
+            &-header {
+                > span {
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    line-height: 3;
+                }
+            }
+        }
+
+        &-overlay--visible {
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.3s ease-in-out;
+        }
+    
+        &--visible {
+            display: flex;
+        }
+    }
+
+    
+
+    
+
+    
+
     // Slider
 
     .swiper-container-3 {
@@ -142,11 +229,9 @@
         display: inline-block;
         border-radius: 0;
         background: #69a1eb;
-        
     }
 
     .swiper-pagination-bullet-active {
-        
         background: #fff;
     }
 

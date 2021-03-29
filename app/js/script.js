@@ -21,10 +21,10 @@ let swiper = new Swiper(sliderFirst, {
   },
   on: {
     init: function () {
-      swiper.init(this).animate();
+      swiperAnimation.init(this).animate();
     },
     slideChange: function () {
-      swiper.init(this).animate();
+      swiperAnimation.init(this).animate();
     }
   },
 
@@ -83,7 +83,7 @@ document.querySelector('.service-accordion').addEventListener('click', (event) =
 window.addEventListener('scroll', function () {
   const nav = document.querySelector('.header__nav')
   const windowPosition = window.scrollY > 0;
-  
+
   nav.classList.toggle('header__nav--active', windowPosition)
 })
 
@@ -98,11 +98,11 @@ const burger = document.querySelector('.header__menu-burger')
 burger.addEventListener('click', (e) => {
   e.preventDefault()
   header.classList.toggle('open')
-  
-  if(header.classList.contains('open')){
+
+  if (header.classList.contains('open')) {
     menuList.classList.add('nav__mobile-menu--active')
     body.classList.add('noscroll')
-  }else{
+  } else {
     menuList.classList.remove('nav__mobile-menu--active')
     body.classList.remove('noscroll')
   }
@@ -116,11 +116,40 @@ links.forEach(link => link.addEventListener('click', function () {
   links.forEach(activeLink => activeLink.classList.remove('nav__link--active'))
   this.classList.add('nav__link--active')
 
-  if(menuList.classList.contains('nav__mobile-menu--active')){
+  if (menuList.classList.contains('nav__mobile-menu--active')) {
     header.classList.remove('open')
     menuList.classList.remove('nav__mobile-menu--active')
   }
 }))
+
+// Modul Windows
+
+const cards = document.querySelectorAll('.solutions__card');
+const modalOverlay = document.querySelector('.modal-overlay ');
+const modals = document.querySelectorAll('.modal');
+
+cards.forEach((el) => {
+	el.addEventListener('click', (e) => {
+		let path = e.currentTarget.getAttribute('data-path');
+
+		modals.forEach((el) => {
+			el.classList.remove('modal--visible');
+		});
+
+		document.querySelector(`[data-target="${path}"]`).classList.add('modal--visible');
+		modalOverlay.classList.add('modal-overlay--visible');
+	});
+});
+
+modalOverlay.addEventListener('click', (e) => {
+
+	if (e.target == modalOverlay) {
+		modalOverlay.classList.remove('modal-overlay--visible');
+		modals.forEach((el) => {
+			el.classList.remove('modal--visible');
+		});
+	}
+});
 
 
 
