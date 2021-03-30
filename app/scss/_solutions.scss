@@ -2,10 +2,18 @@
     background: $drk-blue;
     padding: 5rem 0 7.8rem 0;
 
+    @include breakpoint-down(small) {
+        padding-top: 2rem;
+    }
+
     &__title {
         position: relative;
         h2 {
             color: $white;
+
+            @include breakpoint-down(small) {
+                font-size: 2rem;
+            }
         }
 
         &::after {
@@ -20,6 +28,12 @@
         position: relative;
         z-index: 1;
         padding-top: 4.5rem;
+
+        @include breakpoint-down(large) {
+            padding-top: 2rem;
+            padding-left: 1.1rem;
+            padding-right: 1.1rem;
+        }
     }
 
     &__card {
@@ -142,15 +156,19 @@
         background-color: #fff;
         width: 80%;
         height: 90%;
-
         display: none;
         position: relative;
         z-index: 100;
 
+        @include breakpoint-down(xsmall) {
+            width: 350px;
+            height: 90vh;
+        }
+
         &__cover {
             min-width: 50%;
             height: 100%;
-    
+
             &--1 {
                 background: url("../../images/card-2-min.jpeg") no-repeat center center;
                 background-size: cover;
@@ -178,13 +196,29 @@
         }
 
         &__text {
-            padding: 2rem 2rem;
+            padding: 2rem;
+
+            @include breakpoint-down(small) {
+                padding: 0.8rem;
+            }
+
+            p {
+                @include breakpoint-down(small) {
+                    font-size: 0.875rem;
     
+                }
+            }
+
             &-header {
                 > span {
                     font-size: 1.5rem;
                     font-weight: 700;
                     line-height: 3;
+
+                    @include breakpoint-down(small) {
+                        font-size: 1rem;
+                        line-height: 2;
+                    }
                 }
             }
         }
@@ -194,17 +228,16 @@
             visibility: visible;
             transition: all 0.3s ease-in-out;
         }
-    
+
         &--visible {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            @include breakpoint-down(xsmall) {
+                grid-template-columns: 1fr;
+            }
         }
     }
-
-    
-
-    
-
-    
 
     // Slider
 
@@ -220,6 +253,10 @@
         bottom: -50px;
         left: 53%;
         transform: translateX(-50%);
+
+        @include breakpoint-down(small) {
+            left: 49%;
+        }
     }
 
     .swiper-pagination-bullet {

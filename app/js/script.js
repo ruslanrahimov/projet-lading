@@ -62,6 +62,27 @@ let swiperThird = new Swiper(sliderThird, {
   autoplay: {
     delay: 3000,
   },
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+    },
+    // when window width is >= 480px
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+    900: {
+      slidesPerView: 3,
+      spaceBetween: 40
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    }
+
+  }
 })
 
 

@@ -1,18 +1,44 @@
 .roadmap {
-    background: url('../../images/road-map-bg-min.png') no-repeat center center;
+    background: url("../../images/road-map-bg-min.png") no-repeat center center;
     padding: 6rem 0;
+    @include breakpoint-down(small) {
+        padding: 2rem 0;
+    }
 
-    &__title{
-        &::after{
+    &__title {
+        h2 {
+            @include breakpoint-down(small) {
+                font-size: 2rem;
+            }
+        }
+        &::after {
             width: 31%;
         }
     }
 
-    &__steps{
+    &__steps {
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 1.125rem;
         margin-left: -2rem;
         padding-top: 5rem;
+
+        @include breakpoint-down(xsmall) {
+            grid-template-columns: repeat(1, 1fr);
+            margin-left: 0;
+            gap: 0;
+
+            justify-content: center;
+        }
+    }
+    &__step {
+        width: 100%;
+        img {
+            @include breakpoint-down(xsmall) {
+                width: 80%;
+                display: block;
+                margin: 0 auto;
+            }
+        }
     }
 }

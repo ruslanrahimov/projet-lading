@@ -2,10 +2,40 @@
     min-height: 84vh;
     padding-top: 5rem;
     padding-bottom: 10rem;
+
+    @include breakpoint-down(medium) {
+        padding: 2rem 0 5rem 0;
+    }
+
     &__wrapper {
         display: flex;
         flex-direction: column;
         position: relative;
+        @include breakpoint-down(large) {
+            padding: 0 2rem;
+            
+        }
+    }
+
+    &__title {
+
+        h2 {
+            @include breakpoint-down(small) {
+                font-size: 2rem;
+            }
+        }
+        &::after {
+            @include breakpoint-down(medium) {
+                width: 33%;
+            }
+            @include breakpoint-down(small) {
+                width: 26%;
+            }
+            @include breakpoint-down(xsmall) {
+                width: 52%;
+                
+            }
+        }
     }
 
     &__content {
@@ -14,6 +44,14 @@
         gap: 2rem;
         padding-top: 5rem;
         position: relative;
+
+        @include breakpoint-down(medium) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            gap: 0;
+            padding-top: 3rem;
+        }
+
         &::before {
             content: "";
             position: absolute;
@@ -22,24 +60,50 @@
             height: 100%;
             top: -9rem;
             left: -33rem;
+
+            @include breakpoint-down(medium) {
+                display: none;
+            }
         }
     }
 
     &__text {
         width: 88%;
-        line-height: 1.8;
+        line-height: 1.5;
         letter-spacing: 1.3px;
         position: relative;
-        h3{
+        h3 {
             margin-top: 1rem;
+            @include breakpoint-down(medium){
+                margin-bottom: 1rem;
+            }
         }
 
+        @include breakpoint-down(medium){
+            line-height: 1.2;
+            letter-spacing: 1;
+        }
     }
 
     &__image {
         background: url("../../images/about-1-min.jpg") no-repeat center center;
         background-size: cover;
         position: relative;
+
+        @include breakpoint-down(medium) {
+            grid-row-start: 1;
+            grid-row-end: 2;
+
+            width: 100%;
+            margin: 0 auto;
+        }
+
+
+        @include breakpoint-down(xsmall) {
+           
+            height: 70%;
+        }
+
         &::before {
             content: "";
             position: absolute;
@@ -71,10 +135,24 @@
     position: relative;
     overflow: hidden;
     padding-bottom: 5rem;
+
+    @include breakpoint-down(small) {
+        padding-bottom: 0.5rem;
+        margin-top: 2rem;
+        
+    }
+    @include breakpoint-down(xsmall) {
+        margin-top: -4rem;
+        
+    }
 }
 
 .slider__btns {
     margin-top: -4rem;
+
+    @include breakpoint-down(small){
+        margin-top: .5rem;
+    }
 
     .slider-button-next,
     .slider-button-prev {
