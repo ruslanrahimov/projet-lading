@@ -27,7 +27,6 @@ let swiper = new Swiper(sliderFirst, {
       swiperAnimation.init(this).animate();
     }
   },
-
 });
 
 let swiperSecond = new Swiper(sliderSecond, {
