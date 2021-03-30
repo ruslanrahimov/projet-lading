@@ -266,19 +266,19 @@
             animation-duration: 2s;
 
             &--1 {
-                background: url("../../images/main-bg-min.jpg") no-repeat right center;
+                background: url("../../images/bg-1.jpg") no-repeat right center;
                 background-size: cover;
             }
             &--2 {
-                background: url("../../images/bg-2-min.jpg") no-repeat right center;
+                background: url("../../images/bg-2.jpg") no-repeat right center;
                 background-size: cover;
             }
             &--3 {
-                background: url("../../images/bg-3-min.jpg") no-repeat right center;
+                background: url("../../images/bg-3.jpg") no-repeat right center;
                 background-size: cover;
             }
             &--4 {
-                background: url("../../images/bg-4-min.jpg") no-repeat right center;
+                background: url("../../images/bg-4.jpg") no-repeat right center;
                 background-size: cover;
             }
         }
@@ -289,6 +289,20 @@
             position: relative;
             z-index: 1;
             padding-top: 3rem;
+
+            &--1{
+                padding-top: 5rem;
+            }
+            &--2{
+                padding-top: 5rem;
+                
+            }
+            &--3{
+                padding-top: 5rem;
+            }
+            &--4{
+                padding-top: 5rem;
+            }
         }
 
         &__text {
@@ -301,6 +315,7 @@
 
         &__btn {
             padding: 1rem 4.625rem;
+            margin-top: 1rem;
             text-transform: uppercase;
             border-radius: 5px;
             font-size: 1.125rem;
@@ -321,6 +336,8 @@
                 width: 100px;
                 z-index: -10;
             }
+
+            
         }
         &__btn:hover {
             color: #fff;
