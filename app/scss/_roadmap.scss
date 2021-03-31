@@ -13,6 +13,16 @@
         }
         &::after {
             width: 31%;
+
+            @include breakpoint-down(medium) {
+                width: 39%;
+            }
+            @include breakpoint-down(small) {
+                width: 32%;
+            }
+            @include breakpoint-down(xsmall) {
+                width: 58%;
+            }
         }
     }
 
@@ -23,22 +33,32 @@
         margin-left: -2rem;
         padding-top: 5rem;
 
-        @include breakpoint-down(xsmall) {
-            grid-template-columns: repeat(1, 1fr);
+        @include breakpoint-down(large) {
+           padding-left: 1rem;
+           padding-right: 1rem;
+        }
+        @include breakpoint-down(small) {
+            grid-template-columns: repeat(2, 1fr);
             margin-left: 0;
             gap: 0;
-
-            justify-content: center;
+            padding-top: 3rem;
+        }
+        @include breakpoint-down(xsmall) {
+            grid-template-columns: repeat(1, 1fr);
+            
         }
     }
     &__step {
+        
         width: 100%;
+       
         img {
-            @include breakpoint-down(xsmall) {
-                width: 80%;
+            @include breakpoint-down(large) {
                 display: block;
+                width: 80%;
                 margin: 0 auto;
             }
+            
         }
     }
 }

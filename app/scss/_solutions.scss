@@ -280,6 +280,9 @@
         cursor: pointer;
         transition: all 0.1s ease-in-out;
 
+        @include breakpoint-down(large){
+            display: none;
+        }
         &:hover {
             transform: scale(1.1);
         }

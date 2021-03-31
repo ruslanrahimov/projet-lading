@@ -2,15 +2,34 @@
     background: $drk-blue;
     padding: 4rem 0 2rem 0;
 
+    @include breakpoint-down(small){
+        padding: 2rem 0;
+    }
+
     &__title {
+        
         position: relative;
         h2 {
             color: $white;
+
+            @include breakpoint-down(small){
+                font-size: 2rem;
+            }
         }
 
         &::after {
             width: 18%;
             background: $dark-violet;
+
+            @include breakpoint-down(medium){
+                width: 23%;
+            }
+            @include breakpoint-down(small){
+                width: 20%;
+            }
+            @include breakpoint-down(xsmall){
+                width: 43%;
+            }
         }
     }
 
@@ -19,6 +38,16 @@
         grid-template-columns: repeat(2, 1fr);
         padding: 3rem 0;
         color: #ffffff;
+
+        @include breakpoint-down(large){
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        @include breakpoint-down(small){
+            grid-template-columns: 1fr;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
     }
 
     .form {
@@ -63,6 +92,13 @@
             cursor: pointer;
             transition: all 0.3s ease-in-out;
 
+            @include breakpoint-down(small){
+                width: 30%;
+                margin-top: 0.75rem;
+            }
+            @include breakpoint-down(xsmall){
+                width: 90%;
+            }
             &:hover {
                 color: #ffffff;
             }
@@ -71,8 +107,16 @@
 
     &__items-wrapper {
         padding-left: 2rem;
+
+        @include breakpoint-down(large){
+            padding-left: 0;
+        }
     }
     &__contacts {
+
+        @include breakpoint-down(small){
+            padding-top: 1rem;
+        }
         .contacts {
             &__header {
                 padding: 0.5rem 0;
@@ -131,6 +175,10 @@
         a {
             color: #ffffff;
             padding: 0 0.5rem;
+        }
+
+        @include breakpoint-down(small){
+            justify-content: center;
         }
     }
 }
